@@ -1,0 +1,109 @@
+* {
+    --background: #d6d6d6cc;
+    --background-color: #243137;
+    --border-color: #bd9f67;
+    --text-color: #ffffff;
+    --text-link: #AAB9BF;
+}
+
+body {
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-size: 1em;
+    transform: scale(1.5);
+    text-align: center;
+    overflow: hidden;
+}
+
+img {
+    max-width: 70px;
+    max-height: 70px;
+    top: 40%;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    background-color: var(--background-color);
+    position: relative;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: var(--background-color) 0px 0px 1px 0px;
+}
+
+.card:hover, .card-content_bottom-link:hover{
+    transform: scale(1.1);
+    color: var(--text-link);
+    box-shadow: var(--background-color) 0px 0px 10px 0px;
+}
+
+.card__border {
+    position: absolute;
+    inset: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
+    transition: all 0.5s ease-in-out;
+}
+
+.card__bottom {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-left: 2px;
+    font-size: 1rem;
+    letter-spacing: none;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+
+.card__link {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+}
+
+
+.card__role {
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+    transform: translate(-50%, 0);
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    padding: 0px 5px 0px 8px;
+    color: var(--border-color);
+    padding-left: 8px;
+    letter-spacing: 7px;
+    pointer-events: none;
+    max-width: 100%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        transform: scale(0.9);
+    }
+}
