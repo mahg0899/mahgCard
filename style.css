@@ -43,7 +43,7 @@ img {
     box-shadow: var(--background-color) 0px 0px 1px 0px;
 }
 
-.card:hover, .card-content_bottom-link:hover{
+.card:hover, .card__link:hover{
     transform: scale(1.1);
     color: var(--text-link);
     box-shadow: var(--background-color) 0px 0px 10px 0px;
